@@ -1,6 +1,6 @@
 import { Sparkles, FileText, Briefcase, Code, MessageSquare } from "lucide-react";
 
-export default function GeminiTools() {
+export default function AiTools() {
     type ToolColor = keyof typeof colorClasses;
     interface Tool {
         id: number;

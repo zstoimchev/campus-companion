@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import TopBar from "./TopBar";
+import Sidebar from "../../components/layout/Sidebar.tsx";
+import TopBar from "../../components/layout/TopBar.tsx";
 
-export default function DashboardLayout() {
+export default function AdminLayout() {
     return (
         <div className="flex h-screen bg-gray-950 text-white">
             <Sidebar />

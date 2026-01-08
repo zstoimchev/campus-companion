@@ -5,15 +5,18 @@ import {
     Users,
     Sparkles,
     Settings,
-    BookOpen
+    BookOpen,
+    LogOut
 } from "lucide-react";
 
 const navItems = [
-    { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-    { name: "Events", path: "/events", icon: Calendar },
-    { name: "Study Groups", path: "/groups", icon: BookOpen },
-    { name: "AI Tools", path: "/ai", icon: Sparkles },
-    { name: "Settings", path: "/settings", icon: Settings },
+    { name: "Dashboard", path: "/app", icon: LayoutDashboard },
+    { name: "Events", path: "/app/events", icon: Calendar },
+    { name: "Study Groups", path: "/app/groups", icon: BookOpen },
+    { name: "AI Tools", path: "/app/ai", icon: Sparkles },
+    { name: "Settings", path: "/app/settings", icon: Settings },
+    { name: "Profile", path: "/app/profile", icon: Users },
+    { name: "Log Out", path: "/", icon: LogOut },
 ];
 
 export default function Sidebar() {
@@ -32,6 +35,7 @@ export default function Sidebar() {
                     <NavLink
                         key={item.path}
                         to={item.path}
+                        end={item.path === "/app"} // only exact match for Dashboard
                         className={({ isActive }) =>
                             `flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                                 isActive
