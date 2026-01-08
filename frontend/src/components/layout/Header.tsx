@@ -8,9 +8,10 @@ interface HeaderProps {
 
 const navItems = [
     { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
     { name: "Events", path: "/events" },
-    { name: "Study Groups", path: "/groups" },
-    { name: "AI Tools", path: "/ai" },
+    { name: "Groups", path: "/groups" },
+    { name: "AI", path: "/ai" },
 ];
 
 export default function Header({ variant = "dark" }: HeaderProps) {
@@ -56,14 +57,13 @@ export default function Header({ variant = "dark" }: HeaderProps) {
                                 </li>
                             ))}
                             <li>
-                                <a
-                                    href="https://gdg.community.dev/gdg-on-campus-university-of-primorska-koper-slovenia/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <NavLink
+                                    to="/login"
                                     className="inline-flex items-center px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-medium transition-all"
                                 >
                                     Join Community
-                                </a>
+                                </NavLink>
+
                             </li>
                         </ul>
                     </nav>

@@ -1,7 +1,17 @@
 import { Sparkles, FileText, Briefcase, Code, MessageSquare } from "lucide-react";
 
 export default function GeminiTools() {
-    const tools = [
+    type ToolColor = keyof typeof colorClasses;
+    interface Tool {
+        id: number;
+        title: string;
+        description: string;
+        icon: any;
+        color: ToolColor;
+        status: string;
+    }
+
+    const tools: Tool[] = [
         {
             id: 1,
             title: 'Notes Summarizer',
